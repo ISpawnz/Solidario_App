@@ -2,10 +2,8 @@ package com.carlos.solidario;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,7 +11,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class TelaBusca extends AppCompatActivity{
+public class TelaMenu extends AppCompatActivity {
+
     public ImageButton ibVoltar;
 
     @Override
@@ -26,14 +25,13 @@ public class TelaBusca extends AppCompatActivity{
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-
-        ibVoltar.findViewById(R.id.ib_voltar2);
+        ibVoltar.findViewById(R.id.ib_voltar5);
 
         // Botão para voltar a tela anterior
         ibVoltar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(TelaBusca.this, TelaPrincipal.class);
+                Intent intent = new Intent(TelaMenu.this, TelaPrincipal.class);
                 startActivity(intent);
             }
         });

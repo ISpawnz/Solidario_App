@@ -7,7 +7,7 @@
     android:background="#4CAF50">
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/ib_voltar0"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@android:drawable/arrow_down_float"
@@ -74,7 +74,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="376dp" />
+        tools:layout_editor_absoluteY="374dp" />
 
     <ImageView
         android:id="@+id/imageView5"

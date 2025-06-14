@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tela_principal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#4CAF50">
@@ -21,14 +22,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="413dp"
-        android:layout_height="542dp"
-        tools:layout_editor_absoluteX="-3dp"
-        tools:layout_editor_absoluteY="106dp" />
-
     <ImageButton
-        android:id="@+id/imageButton6"
+        android:id="@+id/ib_adicionar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@android:drawable/ic_menu_add"
@@ -36,7 +31,7 @@
         tools:layout_editor_absoluteY="664dp" />
 
     <ImageButton
-        android:id="@+id/imageButton5"
+        android:id="@+id/ib_mensagem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@android:drawable/ic_dialog_email"
@@ -44,7 +39,7 @@
         tools:layout_editor_absoluteY="664dp" />
 
     <ImageButton
-        android:id="@+id/imageButton7"
+        android:id="@+id/ib_principal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@android:drawable/ic_menu_compass"
@@ -52,11 +47,19 @@
         tools:layout_editor_absoluteY="664dp" />
 
     <ImageButton
-        android:id="@+id/imageButton8"
+        android:id="@+id/ib_menu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@android:drawable/ic_dialog_dialer"
         tools:layout_editor_absoluteX="133dp"
         tools:layout_editor_absoluteY="664dp" />
+
+    <ImageButton
+        android:id="@+id/ib_voltar"
+        android:layout_width="43dp"
+        android:layout_height="28dp"
+        app:srcCompat="@android:drawable/arrow_down_float"
+        tools:layout_editor_absoluteX="4dp"
+        tools:layout_editor_absoluteY="6dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

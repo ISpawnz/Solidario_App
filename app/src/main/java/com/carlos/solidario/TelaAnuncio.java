@@ -1,7 +1,10 @@
 package com.carlos.solidario;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -11,7 +14,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class TelaAnuncio extends AppCompatActivity{
-    private static final String TAG = "------ MainActividy"; // Log
+    public ImageButton ibVoltar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,59 +26,15 @@ public class TelaAnuncio extends AppCompatActivity{
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        ibVoltar.findViewById(R.id.ib_voltar3);
 
-        Toast.makeText(this, "Executou onCreate()", Toast.LENGTH_SHORT).show();
-        Log.i(TAG, "Executou onCreate()");
+        // Botão para voltar a tela anterior
+        ibVoltar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(TelaAnuncio.this, TelaPrincipal.class);
+                startActivity(intent);
+            }
+        });
     }
-    @Override
-    protected void onStart() {
-        super.onStart();
-
-        Toast.makeText(this, "Executou onStart()", Toast.LENGTH_SHORT).show();
-        Log.i(TAG, "Executou onStart()");
-
-    } // Fim do onStart
-
-    protected void onResume(){
-        super.onResume();
-
-        Toast.makeText(this, "Executou onResume()", Toast.LENGTH_SHORT).show();
-        Log.i(TAG, "Executou onResume()");
-
-    } // Fim do onResume
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-
-        Toast.makeText(this, "Executou onPause()", Toast.LENGTH_SHORT).show();
-        Log.i(TAG, "Executou onPause()");
-
-    } // Fim do onPause
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-
-        Toast.makeText(this, "Executou onStop()", Toast.LENGTH_SHORT).show();
-        Log.i(TAG, "Executou onStop()");
-
-    } // Fim do onStop
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-
-        Toast.makeText(this, "Executou onDestroy()", Toast.LENGTH_SHORT).show();
-        Log.i(TAG, "Executou onDestroy()");
-
-    } // Fim do onDestroy
-
-    @Override
-    protected void onRestart() {
-        super.onRestart();
-
-        Toast.makeText(this, "Executou onRestart()", Toast.LENGTH_SHORT).show();
-        Log.i(TAG, "Executou onRestart()");
-    } // Fim do onRestart
 }

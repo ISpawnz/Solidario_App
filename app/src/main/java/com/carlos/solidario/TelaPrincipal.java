@@ -1,7 +1,10 @@
 package com.carlos.solidario;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -10,8 +13,12 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class TelaPrincipal extends AppCompatActivity{
-    private static final String TAG = "------ MainActividy"; // Log
+public class TelaPrincipal extends AppCompatActivity {
+    public ImageButton ibPrincipal;
+    public ImageButton ibMenu;
+    public ImageButton ibMensagem;
+    public ImageButton ibAdicionar;
+    public ImageButton ibVoltar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,58 +31,46 @@ public class TelaPrincipal extends AppCompatActivity{
             return insets;
         });
 
-        Toast.makeText(this, "Executou onCreate()", Toast.LENGTH_SHORT).show();
-        Log.i(TAG, "Executou onCreate()");
+        ibPrincipal.findViewById(R.id.ib_principal);
+        ibMenu.findViewById(R.id.ib_menu);
+        ibMensagem.findViewById(R.id.ib_mensagem);
+        ibAdicionar.findViewById(R.id.ib_adicionar);
+
+        ibVoltar.findViewById(R.id.ib_voltar);
+
+        //Métod0s dos botões para as outras telas
+
+        ibMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(TelaPrincipal.this, TelaMenu.class);
+                startActivity(intent);
+            }
+        });
+
+        ibMensagem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(TelaPrincipal.this, TelaMensagens.class);
+                startActivity(intent);
+            }
+        });
+
+        ibAdicionar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(TelaPrincipal.this, TelaAdicionarProduto.class);
+                startActivity(intent);
+            }
+        });
+
+        // Botão para voltar a tela anterior
+        ibVoltar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(TelaPrincipal.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
     }
-    @Override
-    protected void onStart() {
-        super.onStart();
-
-        Toast.makeText(this, "Executou onStart()", Toast.LENGTH_SHORT).show();
-        Log.i(TAG, "Executou onStart()");
-
-    } // Fim do onStart
-
-    protected void onResume(){
-        super.onResume();
-
-        Toast.makeText(this, "Executou onResume()", Toast.LENGTH_SHORT).show();
-        Log.i(TAG, "Executou onResume()");
-
-    } // Fim do onResume
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-
-        Toast.makeText(this, "Executou onPause()", Toast.LENGTH_SHORT).show();
-        Log.i(TAG, "Executou onPause()");
-
-    } // Fim do onPause
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-
-        Toast.makeText(this, "Executou onStop()", Toast.LENGTH_SHORT).show();
-        Log.i(TAG, "Executou onStop()");
-
-    } // Fim do onStop
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-
-        Toast.makeText(this, "Executou onDestroy()", Toast.LENGTH_SHORT).show();
-        Log.i(TAG, "Executou onDestroy()");
-
-    } // Fim do onDestroy
-
-    @Override
-    protected void onRestart() {
-        super.onRestart();
-
-        Toast.makeText(this, "Executou onRestart()", Toast.LENGTH_SHORT).show();
-        Log.i(TAG, "Executou onRestart()");
-    } // Fim do onRestart
 }

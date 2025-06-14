@@ -8,6 +8,14 @@
     tools:context=".TelaMenuActivity">
 
 
+    <ImageButton
+        android:id="@+id/ib_voltar5"
+        android:layout_width="43dp"
+        android:layout_height="28dp"
+        app:srcCompat="@android:drawable/arrow_down_float"
+        tools:layout_editor_absoluteX="4dp"
+        tools:layout_editor_absoluteY="6dp" />
+
     <ImageView
         android:id="@+id/iv_logo"
         android:layout_width="119dp"
@@ -104,14 +112,6 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spacobotao6" />
-
-    <ImageButton
-        android:id="@+id/imageButton3"
-        android:layout_width="51dp"
-        android:layout_height="40dp"
-        app:srcCompat="@android:drawable/arrow_down_float"
-        tools:layout_editor_absoluteX="3dp"
-        tools:layout_editor_absoluteY="2dp" />
 
     <LinearLayout
         android:id="@+id/perfilContainer"

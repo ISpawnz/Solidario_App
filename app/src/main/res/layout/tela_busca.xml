@@ -7,12 +7,12 @@
     android:background="#4CAF50">
 
     <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/ib_voltar2"
+        android:layout_width="43dp"
+        android:layout_height="28dp"
         app:srcCompat="@android:drawable/arrow_down_float"
-        tools:layout_editor_absoluteX="3dp"
-        tools:layout_editor_absoluteY="2dp" />
+        tools:layout_editor_absoluteX="4dp"
+        tools:layout_editor_absoluteY="6dp" />
 
     <EditText
         android:id="@+id/et_pesquisa"
@@ -28,9 +28,4 @@
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="40dp" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="414dp"
-        android:layout_height="613dp"
-        tools:layout_editor_absoluteX="-4dp"
-        tools:layout_editor_absoluteY="117dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
