@@ -1,65 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/tela_principal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#4CAF50">
+    android:background="@android:color/white">
 
-    <EditText
-        android:id="@+id/et_pesquisar"
-        android:layout_width="0dp"
+    <!-- Conteúdo Central da Home -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:layout_marginBottom="80dp">
+
+        <ImageView
+            android:layout_width="199dp"
+            android:layout_height="186dp"
+            android:contentDescription="@string/desc_logo_app"
+            android:src="@drawable/logo_solidario" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/home_headline"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.Material3.HeadlineMedium"
+            android:textColor="@color/verde_principal"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/home_subtitle"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+            android:textColor="?android:attr/textColorSecondary" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bt_explorar"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_marginTop="32dp"
+            android:paddingStart="32dp"
+            android:paddingEnd="32dp"
+            android:text="@string/action_explore_donations"
+            app:backgroundTint="@color/verde_principal"
+            app:cornerRadius="28dp"
+            app:icon="@drawable/ic_search"
+            app:iconPadding="12dp" />
+
+    </LinearLayout>
+
+    <!-- Barra de Navegação Inferior -->
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottom_app_bar"
+        style="@style/Widget.Material3.BottomAppBar.Colored"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="30dp"
-        android:ems="10"
-        android:hint="Busca"
-        android:inputType="text"
-        android:textColor="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_gravity="bottom"
+        app:fabAlignmentMode="center"
+        app:fabCradleMargin="10dp"
+        app:fabCradleRoundedCornerRadius="28dp">
 
-    <ImageButton
-        android:id="@+id/ib_adicionar"
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="16dp"
+            android:background="@android:color/transparent"
+            app:elevation="0dp"
+            app:itemIconTint="@color/bottom_nav_item_color"
+            app:labelVisibilityMode="unlabeled"
+            app:menu="@menu/bottom_nav_menu" />
+
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+    <!-- Botão Flutuante para Início -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_home"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@android:drawable/ic_menu_add"
-        tools:layout_editor_absoluteX="266dp"
-        tools:layout_editor_absoluteY="664dp" />
+        android:backgroundTint="@color/verde_principal"
+        android:contentDescription="@string/nav_home"
+        android:src="@drawable/ic_home"
+        app:layout_anchor="@id/bottom_app_bar"
+        app:tint="@color/white" />
 
-    <ImageButton
-        android:id="@+id/ib_mensagem"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@android:drawable/ic_dialog_email"
-        tools:layout_editor_absoluteX="201dp"
-        tools:layout_editor_absoluteY="664dp" />
-
-    <ImageButton
-        android:id="@+id/ib_principal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@android:drawable/ic_menu_compass"
-        tools:layout_editor_absoluteX="70dp"
-        tools:layout_editor_absoluteY="664dp" />
-
-    <ImageButton
-        android:id="@+id/ib_menu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@android:drawable/ic_dialog_dialer"
-        tools:layout_editor_absoluteX="133dp"
-        tools:layout_editor_absoluteY="664dp" />
-
-    <ImageButton
-        android:id="@+id/ib_voltar"
-        android:layout_width="43dp"
-        android:layout_height="28dp"
-        app:srcCompat="@android:drawable/arrow_down_float"
-        tools:layout_editor_absoluteX="4dp"
-        tools:layout_editor_absoluteY="6dp" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

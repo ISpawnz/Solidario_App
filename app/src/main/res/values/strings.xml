@@ -1,3 +1,74 @@
 <resources>
-    <string name="app_name">solidario</string>
+    <string name="app_name">Solidario</string>
+
+    <!-- Tela de Login -->
+    <string name="desc_logo_app">Logo do aplicativo Solidario</string>
+    <string name="login_welcome_title">Seja bem-vindo(a)</string>
+    <string name="login_welcome_subtitle">Juntos, transformamos o que sobra em um novo começo.</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_senha">Senha</string>
+    <string name="login_esqueci_senha">Esqueci minha senha</string>
+    <string name="action_entrar">Entrar</string>
+    <string name="login_criar_conta">Não tem uma conta? <b>Crie uma aqui!</b></string>
+
+    <!-- Tela Principal (Home) -->
+    <string name="home_headline">Conectando Corações, Transformando Vidas</string>
+    <string name="home_subtitle">A sua doação pode ser o recomeço de que alguém precisa. Encontre ou anuncie itens com facilidade e faça parte da nossa corrente do bem.</string>
+    <string name="action_explore_donations">Explorar Doações</string>
+    <string name="action_go_to_profile">Ir para o perfil</string>
+
+    <!-- Tela de Adicionar Produto -->
+    <string name="add_product_title">Anunciar Doação</string>
+    <string name="section_photos">Fotos do Anúncio</string>
+    <string name="add_main_photo">Toque para adicionar uma foto</string>
+    <string name="section_details">Detalhes do Anúncio</string>
+    <string name="hint_product_title">Título do anúncio</string>
+    <string name="hint_product_category">Categoria</string>
+    <string name="hint_product_description">Descrição (detalhes, estado de conservação, etc.)</string>
+    <string name="hint_product_address">Endereço de retirada</string>
+    <string name="action_add_product">Publicar Anúncio</string>
+
+    <!-- Tela de Detalhes do Anúncio -->
+    <string name="announcement_title">Anúncio</string>
+    <string name="desc_main_product_image">Imagem principal do produto</string>
+    <string name="section_description">Descrição</string>
+    <string name="section_location">Local de Retirada</string>
+    <string name="action_send_message">Enviar Mensagem</string>
+
+    <!-- Tela de Busca -->
+    <string name="search_hint">Procurar por doações</string>
+    <string name="filter_by_category">Filtrar por categoria:</string>
+    <string name="empty_state_search">Procure por um item para doação</string>
+    <string name="desc_product_image_placeholder">Placeholder para imagem do produto</string>
+    <string name="empty_state_no_results">Nenhum resultado encontrado.\Tente uma busca diferente.</string>
+
+    <!-- Tela de Mensagens -->
+    <string name="messages_title">Mensagens</string>
+    <string name="empty_state_messages">Ainda não há nenhuma mensagem.</string>
+
+    <!-- Tela de Menu/Perfil -->
+    <string name="menu_title">Menu</string>
+    <string name="menu_my_announcements">Meus Anúncios</string>
+    <string name="menu_favorites">Favoritos</string>
+    <string name="menu_my_donations">Minhas Doações</string>
+    <string name="menu_help">Ajuda e Suporte</string>
+    <string name="menu_security">Segurança e Privacidade</string>
+    <string name="action_logout">Sair da conta</string>
+
+    <!-- Navegação Inferior -->
+    <string name="nav_home">Início</string>
+    <string name="nav_messages">Mensagens</string>
+    <string name="nav_favorites">Favoritos</string>
+    <string name="nav_profile">Perfil</string>
+
+    <!-- Array de Categorias de Produto -->
+    <string-array name="product_categories">
+        <item>Móveis</item>
+        <item>Eletrónicos</item>
+        <item>Roupas e Acessórios</item>
+        <item>Eletrodomésticos</item>
+        <item>Livros e Material Escolar</item>
+        <item>Brinquedos</item>
+        <item>Outros</item>
+    </string-array>
 </resources>
